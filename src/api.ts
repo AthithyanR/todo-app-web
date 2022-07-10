@@ -22,8 +22,8 @@ export interface createTodoResponse extends Response {
     data: Todo;
 }
 
-const baseUrl: string = 'http://localhost:8080/api/v1'
-// const baseUrl: string = 'https://spring-services-todo-app.herokuapp.com/api/v1'
+// const baseUrl: string = 'http://localhost:8080/api/v1'
+const baseUrl: string = 'https://spring-services-todo-app.herokuapp.com/api/v1'
 
 export const getAllTodos = async (): Promise<allTodoResponse> => {
     return (await fetch(`${baseUrl}/todos/`, { method: 'GET' })).json();
